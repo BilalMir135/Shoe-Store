@@ -8,3 +8,17 @@
 a {
   text-decoration: none;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toastify {
+  padding: 10px;
+  line-height: 1.2;
+}

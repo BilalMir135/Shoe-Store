@@ -50,14 +50,17 @@ const useStyles = makeStyles({
   },
 });
 
-const ShoeCart = ({ data: { thumbNail, title, description, price } }) => {
+const ShoeCart = ({
+  data: { id, thumbNail, title, description, price, count },
+}) => {
   const classes = useStyles();
-  const { removeCart } = useContext(shoeContext);
+  const { removeCart, increment, decrement } = useContext(shoeContext);
+
   return (
     <Card className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={3}>
-          <img src={thumbNail} width='100%' height='300px' alt='shoe' />
+          <img src={thumbNail} width='100%' height='350px' alt='shoe' />
         </Grid>
 
         <Grid item xs={12} md={9}>
@@ -72,13 +75,21 @@ const ShoeCart = ({ data: { thumbNail, title, description, price } }) => {
               {`$${price}`}
             </Typography>
             <div className={classes.count}>
-              <Button variant='contained' className={classes.decrement}>
+              <Button
+                variant='contained'
+                className={classes.decrement}
+                onClick={() => decrement(id)}
+              >
                 -
               </Button>
               <Typography variant='h6' className={classes.countNum}>
-                1
+                {count}
               </Typography>
-              <Button variant='contained' className={classes.increment}>
+              <Button
+                variant='contained'
+                className={classes.increment}
+                onClick={() => increment(id)}
+              >
                 +
               </Button>
             </div>
@@ -86,7 +97,7 @@ const ShoeCart = ({ data: { thumbNail, title, description, price } }) => {
               variant='contained'
               className={classes.button}
               startIcon={<DeleteIcon />}
-              onClick={() => removeCart()}
+              onClick={() => removeCart(id)}
             >
               Delete
             </Button>

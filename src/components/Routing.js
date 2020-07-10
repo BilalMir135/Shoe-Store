@@ -5,10 +5,13 @@ import Home from './Home';
 import Cart from './Cart';
 import ShoeContextProvider from '../context/ShoeContext';
 import ShoeDetail from './ShoeDetail';
+import Footer from './Footer';
+import Toastify from './Toastify';
 
 const Routing = () => {
   return (
     <Router>
+      <Toastify />
       <ShoeContextProvider>
         <NavBar />
         <Routes>
@@ -16,6 +19,7 @@ const Routing = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/nike-shoe/:id' element={<ShoeDetail />} />
         </Routes>
+        <Footer />
       </ShoeContextProvider>
     </Router>
   );

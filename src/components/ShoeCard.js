@@ -34,6 +34,9 @@ const useStyles = makeStyles({
     '&:hover': {
       backgroundColor: '#d61f16',
     },
+    '@media (min-width: 500px) and (max-width: 770px)': {
+      marginRight: 4,
+    },
   },
   link: {
     color: '#fff',

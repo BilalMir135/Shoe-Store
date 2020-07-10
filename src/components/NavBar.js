@@ -37,6 +37,9 @@ const useStyles = makeStyles(() => ({
   cartIcon: {
     color: '#000',
   },
+  badge: {
+    color: '#d61f16',
+  },
 }));
 
 const NavBar = () => {
@@ -55,8 +58,11 @@ const NavBar = () => {
           </Link>
           <Link to='/cart'>
             <IconButton aria-label='cart' color='inherit'>
-              <Badge badgeContent={cart.lenth} className={classes.cartIcon}>
-                <ShoppingCartIcon fontSize='large' />
+              <Badge badgeContent={cart.length} color='error'>
+                <ShoppingCartIcon
+                  fontSize='large'
+                  className={classes.cartIcon}
+                />
               </Badge>
             </IconButton>
           </Link>

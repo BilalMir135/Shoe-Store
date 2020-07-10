@@ -48,7 +48,7 @@ const ShoeDetail = () => {
           <Button
             variant='contained'
             className={classes.button}
-            onClick={() => addCart(id)}
+            onClick={() => addCart(shoe.id)}
           >
             Add To Cart
           </Button>

@@ -7,6 +7,9 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0 0 5px #ccc',
     padding: '15px 10px',
     margin: '40px 0',
+    '@media(max-width: 600px)': {
+      boxShadow: 'none',
+    },
   },
 }));
 
