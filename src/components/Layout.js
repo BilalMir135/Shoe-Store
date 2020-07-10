@@ -6,7 +6,7 @@ const useStyles = makeStyles(() => ({
   root: {
     boxShadow: '0 0 5px #ccc',
     padding: '15px 10px',
-    margin: '40px 0',
+    margin: '120px 0 40px 0',
     '@media(max-width: 600px)': {
       boxShadow: 'none',
     },

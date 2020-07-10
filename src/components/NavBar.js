@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1,
     fontWeight: 600,
     fontSize: 30,
-    color: '#000',
+    color: '#333',
   },
   appBar: {
     backgroundColor: '#fff',
@@ -35,20 +35,20 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
   },
   cartIcon: {
-    color: '#000',
+    color: '#333',
   },
   badge: {
     color: '#d61f16',
   },
 }));
 
-const NavBar = () => {
+const NavBar = (props) => {
   const classes = useStyles();
   const { cart } = useContext(shoeContext);
 
   return (
     <div className={classes.root}>
-      <AppBar position='static' className={classes.appBar}>
+      <AppBar position='fixed' className={classes.appBar}>
         <Toolbar>
           <Link to='/' className={classes.logo}>
             <img src={Logo} alt='logo' width='80px' height='50px' />

@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     color: '#999',
   },
   emptyDiv: {
-    minHeight: '75vh',
+    minHeight: '100vh',
   },
 });
 
